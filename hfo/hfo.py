@@ -7,7 +7,7 @@ hfo_lib = cdll.LoadLibrary(os.path.join(os.path.dirname(__file__),
                                         'libhfo_c.so'))
 
 ''' Possible feature sets '''
-LOW_LEVEL_FEATURE_SET, HIGH_LEVEL_FEATURE_SET = range(2)
+LOW_LEVEL_FEATURE_SET, HIGH_LEVEL_FEATURE_SET = list(range(2))
 
 ''' An enum of the possible HFO actions
   [Low-Level] Dash(power, relative_direction)
@@ -26,7 +26,7 @@ LOW_LEVEL_FEATURE_SET, HIGH_LEVEL_FEATURE_SET = range(2)
   NOOP(): Do Nothing
   QUIT(): Quit the game '''
 DASH, TURN, TACKLE, KICK, KICK_TO, MOVE_TO, DRIBBLE_TO, INTERCEPT, \
-    MOVE, SHOOT, PASS, DRIBBLE, CATCH, NOOP, QUIT, REDUCE_ANGLE_TO_GOAL,MARK_PLAYER,DEFEND_GOAL,GO_TO_BALL = range(19)
+    MOVE, SHOOT, PASS, DRIBBLE, CATCH, NOOP, QUIT, REDUCE_ANGLE_TO_GOAL,MARK_PLAYER,DEFEND_GOAL,GO_TO_BALL = list(range(19))
 
 ''' Possible game status
   [IN_GAME] Game is currently active
@@ -36,10 +36,10 @@ DASH, TURN, TACKLE, KICK, KICK_TO, MOVE_TO, DRIBBLE_TO, INTERCEPT, \
   [OUT_OF_TIME] Trial has ended due to time limit
   [SERVER_DOWN] Server is not alive
 '''
-IN_GAME, GOAL, CAPTURED_BY_DEFENSE, OUT_OF_BOUNDS, OUT_OF_TIME, SERVER_DOWN = range(6)
+IN_GAME, GOAL, CAPTURED_BY_DEFENSE, OUT_OF_BOUNDS, OUT_OF_TIME, SERVER_DOWN = list(range(6))
 
 ''' Possible sides '''
-RIGHT, NEUTRAL, LEFT = range(-1,2)
+RIGHT, NEUTRAL, LEFT = list(range(-1,2))
 
 class Player(Structure): pass
 Player._fields_ = [
